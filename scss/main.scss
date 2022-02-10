@@ -1,0 +1,23 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// VARIABLES
+@import './utilidades/colores';
+@import './utilidades/fuentes';
+@import './utilidades/extend';
+@import './utilidades/mixin';
+@import './utilidades/map';
+
+// CSS GENERAL  Y UTILIDADES
+@import './utilidades/barra';
+@import './header-footer/header';
+@import './header-footer/footer';
+@import './paginas/cssGeneral';
+
+//PAGINAS
+@import './paginas/index';
+@import'./paginas/musculosas';
+@import './paginas/contact';

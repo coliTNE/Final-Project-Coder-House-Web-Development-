@@ -1,0 +1,27 @@
+// @mixin backColor ($bColor){
+//     @if $bColor == 1 {
+//         background-color: $goldenState;
+//     }
+//     @else if $bColor == 2 {
+//         background-color: $bulls;
+//     }
+//     @else if $bColor == 3 {
+//         background-color: $lakers;
+//     }
+//     @else if $bColor == 4 {
+//         background-color: $celtics;
+//     }
+//     @else if $bColor == 5 {
+//         background-color: $spurs;
+//     }
+//     @else {
+//         background-color: $miami;
+//     }
+// }
+
+@mixin sectionClass ($section){
+    @if $section == 'musculosas' {
+        border-top: 3px solid $darkest;
+    }
+}
+

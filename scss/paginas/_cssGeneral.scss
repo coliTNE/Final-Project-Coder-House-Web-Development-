@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+    body {
+        background-color: black;
+        max-width: 100vw;
+        overflow-x: hidden;
+        font-family: $monserrat;
+        .main__section {
+            @extend %mainSection;
+            .main__div--center  {
+                text-align: center;
+            }
+        }
+        .main__div {
+            padding-top: 1.5em;
+        }
+        .main__div--flex {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            max-width: 100%;
+        }
+        .spanGold {
+            color: $darkGold;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    html {
+        body {
+            .main__div--flex {
+                flex-direction: row;
+            }
+        }
+    }
+}

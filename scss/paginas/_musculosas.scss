@@ -1,0 +1,267 @@
+.musculosas {
+    .main__section--musculosas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3em 0;
+        .main__div {
+            .main__tittle {
+                margin-top: 1.2em;
+            }
+            .main__text {
+                .main__subtittle {
+                    padding-bottom: .8em;
+                }
+            }
+        }
+        .main__boxBar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3em; 
+            .main__box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                transition: ease-out .6s;
+                padding: 2px;
+
+                .main__boxImg {
+                    width: 100%;
+                    object-fit: cover;
+                    filter: grayscale(100);
+                    transition: ease-out .6s;
+                    &:hover {
+                        filter: grayscale(0);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .musculosas__section {
+        @include sectionClass(musculosas);
+        padding: 1.5em 0;
+        .musculosas__logo {
+            text-align: center;
+            padding-top: 6em;
+            margin: 0 auto;
+            min-width: 100px;
+            max-width: 150px;
+        }
+        .musculosas__box {
+            padding: 2em;
+            display: grid;
+            grid-template-columns: 1;
+            justify-content: center;
+            gap: 2em;
+            .musculosas__card {
+                width: 300px;
+                height: 360px;
+                padding: 2rem 1rem;
+                position: relative;
+                background-color: #fff;
+                display: flex;
+                align-items: flex-end;
+                box-shadow: 2px 7px 10px rgba(0, 0, 0, 0.6);
+                transition: .5s ease-in-out;
+                border-radius: 15px;
+                &:hover {
+                    transform: translateY(20px);
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(rgba(104, 92, 69, 0.2), rgba(0, 0, 0, 0.9) );
+                    z-index: 2;
+                    transition: .5 all;
+                    opacity: 0;
+                    border-radius: 10px;
+                }
+                &:hover::before {
+                    opacity: 1;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 10px;
+                }
+                .musculosas__info {
+                    position: relative;
+                    z-index: 3;
+                    color: $white;
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: .5 all;
+                    padding-bottom: 10px;
+                    h3 {
+                        margin: 0;
+                    }
+                    p {
+                        letter-spacing: 1px;
+                        margin-top: 8px;
+                        margin-bottom: 20px;
+                    }
+                    .musculosas__btn {
+                        text-decoration: none;
+                        color: $darkest;
+                        padding: 0.5rem;
+                        background-color: $gold;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: .4s ease-in-out;
+                        border-radius: 5px;
+                        &:hover {
+                            background-color: $brightGold;
+                        }
+                    }
+                }
+                &:hover .musculosas__info {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .musculosas__section--sticky {
+        @include sectionClass(sticky);
+    }
+    .musculosas__section--opacity {
+        @include sectionClass(opacity);
+    }
+    .musculosas__section--goldenState {
+        background-color: map-get($backColors, goldenState);
+    }
+    .musculosas__section--bulls {
+        background-color: map-get($backColors, bulls);
+    }
+    .musculosas__section--lakers {
+        background-color: map-get($backColors, lakers);
+    }
+    .musculosas__section--celtics {
+        background-color: map-get($backColors, celtics);
+    }
+    .musculosas__section--spurs {
+        background-color: map-get($backColors, spurs);
+    }
+    .musculosas__section--miami {
+        background-color: map-get($backColors, miami);
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 998;
+        opacity: 0;
+        transition: .6s ease-out;
+        display: none;
+        padding-left: 1.2rem;
+        .sidebar__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .sidebar__logo {
+                width: 50px;
+                padding-top: 1em;
+                cursor: pointer;
+            }
+        }
+        .sidebar__nav {
+            height: inherit;
+            .sidebar__list {
+                height: inherit;
+                list-style: none;
+                font-size: 1.525rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+                transition: all ease-out .5s;
+                padding: 0;
+                .sidebar__item {
+                    padding: .2em .5em;
+                    width: 100px;
+                    min-width: 100px;
+                    min-height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    filter: grayscale(1000);
+                    transition: ease-out .3s;
+                    position: relative;
+                    transform: scale(1.2);
+                }
+                .sidebar__item.active {
+                    transform: translateX(10px) scale(1.2);
+                    filter: grayscale(0);
+                    
+                }
+            }
+        }
+    }
+    .sidebar.sticky {
+        opacity: 1;
+    }  
+}
+
+@media (min-width: 1000px) {
+    .main {
+        .main__section--musculosas {
+            min-height: 100vh !important;
+            .main__div {
+                .main__tittle {
+                    margin-top: 0;
+                }
+                .main__text {
+                    .main__subtittle {
+                        padding-bottom: .8em;
+                    }
+                }
+            }
+            .main__boxBar {
+                grid-template-columns: repeat(6, 1fr);
+                .main__box {
+                    width: 180px;
+                }
+            }
+        }
+        .musculosas__section {
+            padding: 0;
+            min-height: 110vh;
+            .musculosas__logo {
+                max-width: 300px;
+            }
+            .musculosas__box {
+                .musculosas__card {
+                    width: 390px;
+                    height: 450px;
+                }   
+            }
+        }
+        .sidebar {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .main {
+        .musculosas__section {
+            .musculosas__box {
+                padding-top: 8em;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}

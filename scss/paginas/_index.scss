@@ -1,0 +1,39 @@
+
+.main__section {
+    .main__div {
+        .main__tittle {
+            @extend %tittleStyle;
+        }
+        .main__subtittle {
+            @extend %subtittleStyle;
+        }
+        .main__text {
+            .main__subtittle {
+                @extend %subtittleStyle;
+            }
+            .main__p {
+                @extend %parragraphStyle;
+            }
+        }
+    }
+    .main__div--carousel {
+        padding-bottom: 6.8em;
+        .carousel-item {
+            .carousel__img {
+                margin: 0 auto;
+                min-width: 250px;
+                width: 100%;
+                border-radius: 15px;
+                box-shadow: 2px 7px 10px rgba(41, 41, 41, 0.8);
+            }
+            .carousel-caption {
+                .carousel__tittle {
+                    font-size: calc(.8rem + .7vw) ;
+                    font-family: $oswald;
+                }
+            }
+        }
+        
+    }
+}
+

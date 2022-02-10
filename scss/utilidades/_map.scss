@@ -1,0 +1,14 @@
+$backColors: (
+	goldenState: $goldenState,
+	bulls: $bulls,
+	lakers: $lakers,
+	celtics: $celtics,
+    spurs: $spurs,
+    miami: $miami
+);
+
+@each $backColor, $color in $backColors {
+    .musculosas__section--#{$backColor} {
+        background: $color;
+    }
+}

@@ -1,0 +1,503 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html body .main__section {
+  padding-top: 145px;
+  color: #F5F2EE;
+  line-height: 1.6; }
+
+.main__section .main__div .main__tittle {
+  font-size: calc(4.2vw + 2rem); }
+
+.main__section .main__div .main__subtittle, .main__section .main__div .main__text .main__subtittle {
+  font-size: calc(2vw + 1rem); }
+
+.main__section .main__div .main__text .main__p {
+  font-size: calc(.5rem + .6vw);
+  padding-top: .4em; }
+
+.musculosas__section--goldenState {
+  background: #edc44a; }
+
+.musculosas__section--bulls {
+  background: #ff1b1c80; }
+
+.musculosas__section--lakers {
+  background: #4c2c69b3; }
+
+.musculosas__section--celtics {
+  background: #63c13299; }
+
+.musculosas__section--spurs {
+  background: #d9dadb; }
+
+.musculosas__section--miami {
+  background: #4acec1; }
+
+::-webkit-scrollbar {
+  width: 20px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  transition: .6s ease-out;
+  padding: 40px 60px;
+  z-index: 999 !important; }
+  .header .nav__logo {
+    position: relative;
+    text-decoration: none;
+    transition: .6s ease-out;
+    display: none; }
+    .header .nav__logo .nav__img {
+      position: relative; }
+    .header .nav__logo .nav__img--gray {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: .6s ease-out; }
+  .header .nav__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%; }
+    .header .nav__list .nav__item {
+      position: relative;
+      list-style: none; }
+      .header .nav__list .nav__item::after {
+        content: "";
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        height: 2px;
+        background: #A59678;
+        transform: scale(0, 1);
+        transition: all ease-out .4s;
+        transform-origin: center;
+        top: 0; }
+      .header .nav__list .nav__item:hover::after {
+        transform: scale(1.1); }
+      .header .nav__list .nav__item .nav__link {
+        position: relative;
+        margin: 0 1em;
+        text-decoration: none;
+        color: #F5F2EE !important;
+        letter-spacing: 2px;
+        transition: .6s ease-out;
+        font-size: calc(.5rem + .5vw); }
+    .header .nav__list .nav__item--button::after {
+      content: none; }
+    .header .nav__list .nav__item--button .nav__link--button {
+      background: linear-gradient(90deg, #a8997c 0%, #a59678 50%, #b1955c 100%);
+      padding: .30em 1em;
+      border-radius: 10em;
+      transition: all ease-out .4s;
+      opacity: .85;
+      border: #96886d 1px solid;
+      border-color: #a59679, #96886d;
+      box-shadow: inset #96886d 0px 0px 2px 1px; }
+      .header .nav__list .nav__item--button .nav__link--button::after {
+        content: none; }
+      .header .nav__list .nav__item--button .nav__link--button:hover {
+        box-shadow: inset #b1955c 0px 0px 2px 1px;
+        opacity: 1;
+        border: #8f8268 1px solid;
+        border-color: #96886d, #b1955c; }
+
+header.sticky {
+  padding: 10px 100px;
+  background-color: #c4c2c2;
+  border-bottom: 3px solid #685c45; }
+  header.sticky .nav__logo .nav__img--gray {
+    opacity: 1; }
+  header.sticky .nav__list .nav__item .nav__link {
+    color: #202020 !important; }
+
+@media (min-width: 1000px) {
+  .header {
+    padding: 40px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header .nav__logo {
+      display: block; }
+    .header .nav__list {
+      width: unset;
+      margin: 0 5px; }
+      .header .nav__list .nav__link {
+        font-size: calc(.7rem + .5vw); } }
+
+.footer {
+  background-color: #c4c2c2;
+  font-weight: 300;
+  border-top: 3px solid #685c45; }
+  .footer .footer__text {
+    padding-top: 3em;
+    text-align: center;
+    font-size: calc(.8rem + .2vw); }
+    .footer .footer__text .footer__list {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .footer .footer__text .footer__list .footer__item {
+        padding-bottom: 2em; }
+        .footer .footer__text .footer__list .footer__item .footer__link {
+          text-decoration: none; }
+
+html {
+  scroll-behavior: smooth; }
+  html body {
+    background-color: black;
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif; }
+    html body .main__section .main__div--center {
+      text-align: center; }
+    html body .main__div {
+      padding-top: 1.5em; }
+    html body .main__div--flex {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    html body img {
+      max-width: 100%; }
+    html body .spanGold {
+      color: #685c45; }
+
+@media (min-width: 1000px) {
+  html body .main__div--flex {
+    flex-direction: row; } }
+
+.main__section .main__div--carousel {
+  padding-bottom: 6.8em; }
+  .main__section .main__div--carousel .carousel-item .carousel__img {
+    margin: 0 auto;
+    min-width: 250px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 2px 7px 10px rgba(41, 41, 41, 0.8); }
+  .main__section .main__div--carousel .carousel-item .carousel-caption .carousel__tittle {
+    font-size: calc(.8rem + .7vw);
+    font-family: "Oswald", sans-serif; }
+
+.musculosas .main__section--musculosas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3em 0; }
+  .musculosas .main__section--musculosas .main__div .main__tittle {
+    margin-top: 1.2em; }
+  .musculosas .main__section--musculosas .main__div .main__text .main__subtittle {
+    padding-bottom: .8em; }
+  .musculosas .main__section--musculosas .main__boxBar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em; }
+    .musculosas .main__section--musculosas .main__boxBar .main__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      transition: ease-out .6s;
+      padding: 2px; }
+      .musculosas .main__section--musculosas .main__boxBar .main__box .main__boxImg {
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale(100);
+        transition: ease-out .6s; }
+        .musculosas .main__section--musculosas .main__boxBar .main__box .main__boxImg:hover {
+          filter: grayscale(0);
+          transform: scale(1.1); }
+
+.musculosas .musculosas__section {
+  border-top: 3px solid #202020;
+  padding: 1.5em 0; }
+  .musculosas .musculosas__section .musculosas__logo {
+    text-align: center;
+    padding-top: 6em;
+    margin: 0 auto;
+    min-width: 100px;
+    max-width: 150px; }
+  .musculosas .musculosas__section .musculosas__box {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+    gap: 2em; }
+    .musculosas .musculosas__section .musculosas__box .musculosas__card {
+      width: 300px;
+      height: 360px;
+      padding: 2rem 1rem;
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 2px 7px 10px rgba(0, 0, 0, 0.6);
+      transition: .5s ease-in-out;
+      border-radius: 15px; }
+      .musculosas .musculosas__section .musculosas__box .musculosas__card:hover {
+        transform: translateY(20px); }
+      .musculosas .musculosas__section .musculosas__box .musculosas__card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(104, 92, 69, 0.2), rgba(0, 0, 0, 0.9));
+        z-index: 2;
+        transition: .5 all;
+        opacity: 0;
+        border-radius: 10px; }
+      .musculosas .musculosas__section .musculosas__box .musculosas__card:hover::before {
+        opacity: 1; }
+      .musculosas .musculosas__section .musculosas__box .musculosas__card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px; }
+      .musculosas .musculosas__section .musculosas__box .musculosas__card .musculosas__info {
+        position: relative;
+        z-index: 3;
+        color: #F5F2EE;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: .5 all;
+        padding-bottom: 10px; }
+        .musculosas .musculosas__section .musculosas__box .musculosas__card .musculosas__info h3 {
+          margin: 0; }
+        .musculosas .musculosas__section .musculosas__box .musculosas__card .musculosas__info p {
+          letter-spacing: 1px;
+          margin-top: 8px;
+          margin-bottom: 20px; }
+        .musculosas .musculosas__section .musculosas__box .musculosas__card .musculosas__info .musculosas__btn {
+          text-decoration: none;
+          color: #202020;
+          padding: 0.5rem;
+          background-color: #A59678;
+          font-weight: bold;
+          cursor: pointer;
+          transition: .4s ease-in-out;
+          border-radius: 5px; }
+          .musculosas .musculosas__section .musculosas__box .musculosas__card .musculosas__info .musculosas__btn:hover {
+            background-color: #b1955c; }
+      .musculosas .musculosas__section .musculosas__box .musculosas__card:hover .musculosas__info {
+        opacity: 1; }
+
+.musculosas .musculosas__section--goldenState {
+  background-color: #edc44a; }
+
+.musculosas .musculosas__section--bulls {
+  background-color: #ff1b1c80; }
+
+.musculosas .musculosas__section--lakers {
+  background-color: #4c2c69b3; }
+
+.musculosas .musculosas__section--celtics {
+  background-color: #63c13299; }
+
+.musculosas .musculosas__section--spurs {
+  background-color: #d9dadb; }
+
+.musculosas .musculosas__section--miami {
+  background-color: #4acec1; }
+
+.musculosas .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 998;
+  opacity: 0;
+  transition: .6s ease-out;
+  display: none;
+  padding-left: 1.2rem; }
+  .musculosas .sidebar .sidebar__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .musculosas .sidebar .sidebar__row .sidebar__logo {
+      width: 50px;
+      padding-top: 1em;
+      cursor: pointer; }
+  .musculosas .sidebar .sidebar__nav {
+    height: inherit; }
+    .musculosas .sidebar .sidebar__nav .sidebar__list {
+      height: inherit;
+      list-style: none;
+      font-size: 1.525rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      transition: all ease-out .5s;
+      padding: 0; }
+      .musculosas .sidebar .sidebar__nav .sidebar__list .sidebar__item {
+        padding: .2em .5em;
+        width: 100px;
+        min-width: 100px;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: grayscale(1000);
+        transition: ease-out .3s;
+        position: relative;
+        transform: scale(1.2); }
+      .musculosas .sidebar .sidebar__nav .sidebar__list .sidebar__item.active {
+        transform: translateX(10px) scale(1.2);
+        filter: grayscale(0); }
+
+.musculosas .sidebar.sticky {
+  opacity: 1; }
+
+@media (min-width: 1000px) {
+  .main .main__section--musculosas {
+    min-height: 100vh !important; }
+    .main .main__section--musculosas .main__div .main__tittle {
+      margin-top: 0; }
+    .main .main__section--musculosas .main__div .main__text .main__subtittle {
+      padding-bottom: .8em; }
+    .main .main__section--musculosas .main__boxBar {
+      grid-template-columns: repeat(6, 1fr); }
+      .main .main__section--musculosas .main__boxBar .main__box {
+        width: 180px; }
+  .main .musculosas__section {
+    padding: 0;
+    min-height: 110vh; }
+    .main .musculosas__section .musculosas__logo {
+      max-width: 300px; }
+    .main .musculosas__section .musculosas__box .musculosas__card {
+      width: 390px;
+      height: 450px; }
+  .main .sidebar {
+    display: block; } }
+
+@media (min-width: 1400px) {
+  .main .musculosas__section .musculosas__box {
+    padding-top: 8em;
+    grid-template-columns: repeat(3, 1fr); } }
+
+.contact__section {
+  background-color: unset; }
+  .contact__section .container--contact {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px; }
+    .contact__section .container--contact::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: url(../images/golden-curry.jpg) no-repeat center;
+      background-size: cover;
+      filter: blur(50px);
+      z-index: -1; }
+    .contact__section .container--contact .contact__box {
+      max-width: 850px;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19); }
+      .contact__section .container--contact .contact__box .contact__left {
+        background: url(../images/golden-curry.jpg) no-repeat center;
+        background-size: cover;
+        height: 200px; }
+      .contact__section .container--contact .contact__box .contact__right {
+        padding: 25px 40px; }
+        .contact__section .container--contact .contact__box .contact__right h1 {
+          position: relative;
+          padding: 0 0 10px;
+          margin-bottom: 10px;
+          color: #242424;
+          font-size: 2rem; }
+          .contact__section .container--contact .contact__box .contact__right h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 50px;
+            border-radius: 2px;
+            background-color: #A59678; }
+        .contact__section .container--contact .contact__box .contact__right .contact__input {
+          width: 100%;
+          border: 2px solid rgba(0, 0, 0, 0);
+          outline: none;
+          background-color: rgba(230, 230, 230, 0.6);
+          padding: 0.5rem 1rem;
+          font-size: 1.1rem;
+          margin-bottom: 22px;
+          transition: .3s; }
+          .contact__section .container--contact .contact__box .contact__right .contact__input:hover {
+            background-color: rgba(0, 0, 0, 0.1); }
+          .contact__section .container--contact .contact__box .contact__right .contact__input:focus {
+            border: 2px solid #A59678;
+            background-color: #fff; }
+        .contact__section .container--contact .contact__box .contact__right textarea {
+          min-height: 150px;
+          max-height: 400px;
+          overflow-y: scroll; }
+        .contact__section .container--contact .contact__box .contact__right .contact__btns {
+          display: flex;
+          gap: 1em; }
+          .contact__section .container--contact .contact__box .contact__right .contact__btns .contact__btn {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #A59678;
+            color: #fff;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: .3s; }
+            .contact__section .container--contact .contact__box .contact__right .contact__btns .contact__btn:hover {
+              background-color: #b1955c; }
+          .contact__section .container--contact .contact__box .contact__right .contact__btns .contact__btn--rst {
+            opacity: .85; }
+        .contact__section .container--contact .contact__box .contact__right .contact__select {
+          cursor: pointer; }
+
+.vh-100 {
+  height: unset !important; }
+
+@media (min-width: 1000px) {
+  .contact__section .container--contact .contact__box {
+    grid-template-columns: repeat(2, 1fr); }
+    .contact__section .container--contact .contact__box .contact__left {
+      height: 100%; }
+  .vh-100 {
+    height: 100vh !important; } }
