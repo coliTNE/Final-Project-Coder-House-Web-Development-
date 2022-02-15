@@ -4,10 +4,7 @@
         padding: 5vh 0;
         border-top: 3px $darkest solid;
         .musculosas__div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            @extend %divFlex;
             .musculosas__col {
                 text-align: center;
             }
@@ -121,10 +118,7 @@
         }
     }
     &__section--first {
-        padding-top: calc(145px + 5vh);
-        color: $white;
-        line-height: 1.6;
-        border-top: unset;
+        @extend %mainSection;
         .musculosas__tittleBox {
             h1 {
                 @extend %tittleStyle;

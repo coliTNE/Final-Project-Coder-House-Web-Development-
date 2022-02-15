@@ -1,7 +1,8 @@
 %mainSection {
-    padding-top: 145px;
+    padding: calc(145px + 5vh) 0 5vh 0 !important;
     color: $white;
     line-height: 1.6;
+    border-top: unset;
 }
 
 %tittleStyle {
@@ -17,4 +18,26 @@
 %parragraphStyle {
     font-size: calc(.5rem + .6vw);
     padding-top: .4em;
+}
+
+%divFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%divGrid {
+    display: grid;
+    grid-template-columns: 1;
+    align-items: center;
+    gap: 0 2em;
+}
+
+@media (min-width: 1000px) {
+    %divGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 }
