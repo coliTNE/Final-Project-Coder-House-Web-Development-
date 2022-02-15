@@ -1,171 +1,162 @@
 .musculosas {
-    .main__section--musculosas {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 3em 0;
-        .main__div {
-            .main__tittle {
-                margin-top: 1.2em;
+    &__section {
+        min-height: 100vh;
+        padding: 5vh 0;
+        border-top: 3px $darkest solid;
+        .musculosas__div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .musculosas__col {
+                text-align: center;
             }
-            .main__text {
-                .main__subtittle {
-                    padding-bottom: .8em;
-                }
-            }
-        }
-        .main__boxBar {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3em; 
-            .main__box {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 150px;
-                transition: ease-out .6s;
-                padding: 2px;
-
-                .main__boxImg {
-                    width: 100%;
-                    object-fit: cover;
-                    filter: grayscale(100);
-                    transition: ease-out .6s;
-                    &:hover {
-                        filter: grayscale(0);
-                        transform: scale(1.1);
-                    }
+            .musculosas__col--1 {
+                .musculosas__img {
+                    padding-top: 4em;
+                    min-width: 100px;
+                    max-width: 150px;
                 }
             }
-        }
-    }
-    .musculosas__section {
-        @include sectionClass(musculosas);
-        padding: 1.5em 0;
-        .musculosas__logo {
-            text-align: center;
-            padding-top: 6em;
-            margin: 0 auto;
-            min-width: 100px;
-            max-width: 150px;
-        }
-        .musculosas__box {
-            padding: 2em;
-            display: grid;
-            grid-template-columns: 1;
-            justify-content: center;
-            gap: 2em;
-            .musculosas__card {
-                width: 300px;
-                height: 360px;
-                padding: 2rem 1rem;
-                position: relative;
-                background-color: #fff;
-                display: flex;
-                align-items: flex-end;
-                box-shadow: 2px 7px 10px rgba(0, 0, 0, 0.6);
-                transition: .5s ease-in-out;
-                border-radius: 15px;
-                &:hover {
-                    transform: translateY(20px);
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(rgba(104, 92, 69, 0.2), rgba(0, 0, 0, 0.9) );
-                    z-index: 2;
-                    transition: .5 all;
-                    opacity: 0;
-                    border-radius: 10px;
-                }
-                &:hover::before {
-                    opacity: 1;
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    border-radius: 10px;
-                }
-                .musculosas__info {
-                    position: relative;
-                    z-index: 3;
-                    color: $white;
-                    opacity: 0;
-                    transform: translateY(30px);
-                    transition: .5 all;
-                    padding-bottom: 10px;
-                    h3 {
-                        margin: 0;
-                    }
-                    p {
-                        letter-spacing: 1px;
-                        margin-top: 8px;
-                        margin-bottom: 20px;
-                    }
-                    .musculosas__btn {
-                        text-decoration: none;
-                        color: $darkest;
-                        padding: 0.5rem;
-                        background-color: $gold;
-                        font-weight: bold;
-                        cursor: pointer;
-                        transition: .4s ease-in-out;
-                        border-radius: 5px;
+            .musculosas__col--2 {
+                padding-top: 7em;
+                .musculosas__box {
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.5em 3em;
+                    &--BarItem {
+                        filter: grayscale(100);
+                        transition: ease-out .6s;
                         &:hover {
-                            background-color: $brightGold;
+                            filter: grayscale(0);
+                            transform: scale(1.02);
+                        }
+                        img {
+                            max-width: 150px;
                         }
                     }
                 }
-                &:hover .musculosas__info {
-                    opacity: 1;
+            }
+            .musculosas__col--grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2.4em;
+                .musculosas__card {
+                    text-align: start;
+                    width: 300px;
+                    height: 360px;
+                    padding: 2rem 1rem;
+                    position: relative;
+                    background-color: #fff;
+                    display: flex;
+                    align-items: flex-end;
+                    box-shadow: 2px 7px 10px rgba(0, 0, 0, 0.6);
+                    transition: .5s ease-in-out;
+                    border-radius: 15px;
+                    &:hover {
+                        transform: translateY(20px);
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(rgba(104, 92, 69, 0.2), rgba(0, 0, 0, 0.9) );
+                        z-index: 2;
+                        transition: .5 all;
+                        opacity: 0;
+                        border-radius: 10px;
+                    }
+                    &:hover::before {
+                        opacity: 1;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 10px;
+                    }
+                    .musculosas__info {
+                        position: relative;
+                        z-index: 3;
+                        color: $white;
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: .5 all;
+                        padding-bottom: 10px;
+                        h3 {
+                            margin: 0;
+                        }
+                        p {
+                            letter-spacing: 1px;
+                            margin-top: 8px;
+                            margin-bottom: 20px;
+                        }
+                        .musculosas__btn {
+                            text-decoration: none;
+                            color: $darkest;
+                            padding: 0.5rem;
+                            background-color: $gold;
+                            font-weight: bold;
+                            cursor: pointer;
+                            transition: .4s ease-in-out;
+                            border-radius: 5px;
+                            &:hover {
+                                background-color: $brightGold;
+                            }
+                        }
+                    }
+                    &:hover .musculosas__info {
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
-    .musculosas__section--sticky {
-        @include sectionClass(sticky);
+    &__section--first {
+        padding-top: calc(145px + 5vh);
+        color: $white;
+        line-height: 1.6;
+        border-top: unset;
+        .musculosas__tittleBox {
+            h1 {
+                @extend %tittleStyle;
+            }
+            h2 {
+                @extend %subtittleStyle;
+            }
+        }
     }
-    .musculosas__section--opacity {
-        @include sectionClass(opacity);
-    }
-    .musculosas__section--goldenState {
-        background-color: map-get($backColors, goldenState);
-    }
-    .musculosas__section--bulls {
-        background-color: map-get($backColors, bulls);
-    }
-    .musculosas__section--lakers {
-        background-color: map-get($backColors, lakers);
-    }
-    .musculosas__section--celtics {
-        background-color: map-get($backColors, celtics);
-    }
-    .musculosas__section--spurs {
-        background-color: map-get($backColors, spurs);
-    }
-    .musculosas__section--miami {
-        background-color: map-get($backColors, miami);
+    &__section--lakers {
+        .musculosas__div {
+            .musculosas__col--1 {
+                margin-top: 50px;
+                .musculosas__img {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
     .sidebar {
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
-        z-index: 998;
+        z-index: 10;
         opacity: 0;
         transition: .6s ease-out;
         display: none;
-        padding-left: 1.2rem;
+        padding-left: 1.6rem;
+        margin-top: 50px;
+        transform: scale(0, 1);
+        transition: .3s ease-out;
         .sidebar__row {
             display: flex;
             justify-content: space-between;
@@ -177,76 +168,100 @@
             }
         }
         .sidebar__nav {
-            height: inherit;
+           height: inherit;
             .sidebar__list {
-                height: inherit;
-                list-style: none;
-                font-size: 1.525rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 1em;
-                transition: all ease-out .5s;
-                padding: 0;
-                .sidebar__item {
-                    padding: .2em .5em;
-                    width: 100px;
-                    min-width: 100px;
-                    min-height: 100px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    filter: grayscale(1000);
-                    transition: ease-out .3s;
-                    position: relative;
-                    transform: scale(1.2);
-                }
-                .sidebar__item.active {
-                    transform: translateX(10px) scale(1.2);
-                    filter: grayscale(0);
-                    
-                }
+               height: inherit;
+               list-style: none;
+               font-size: 1.525rem;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               gap: 1em;
+               transition: all ease-out .5s;
+               padding: 0;
+               .sidebar__item {
+                   padding: .2em .5em;
+                   width: 100px;
+                   min-width: 100px;
+                   min-height: 100px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   filter: grayscale(1000);
+                   transition: ease-out .3s;
+                   position: relative;
+                   transform: scale(1.2);
+                   &::after {
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, .1);
+                        border-radius: 50%;
+                        transform: scale(0.8);
+                        box-shadow: rgba(0, 0, 0, .1) 0px 0px 10px 2px;
+                        position: absolute;
+                        z-index: -1;
+                   }
+               }
+               .sidebar__item.active {
+                  transform: translateX(10px) scale(1.2);
+                   filter: grayscale(0);
+                   
+               }
             }
         }
     }
     .sidebar.sticky {
         opacity: 1;
+        transform: scale(1, 1);
+        transform-origin: left;
     }  
 }
 
 @media (min-width: 1000px) {
-    .main {
-        .main__section--musculosas {
-            min-height: 100vh !important;
-            .main__div {
-                .main__tittle {
-                    margin-top: 0;
-                }
-                .main__text {
-                    .main__subtittle {
-                        padding-bottom: .8em;
+    .musculosas {
+        &__section {
+            min-height: 110vh;
+            .musculosas__div {
+                .musculosas__col--1 {
+                    .musculosas__img {
+                        max-width: 250px;
                     }
                 }
-            }
-            .main__boxBar {
-                grid-template-columns: repeat(6, 1fr);
-                .main__box {
-                    width: 180px;
+                .musculosas__col--2 {
+                    .musculosas__box {
+                        margin-top: 10em;
+                        grid-template-columns: repeat(6, 1fr);
+                        align-items: center;
+                        gap: 1.5em 3em;
+                        &--BarItem {
+                            img {
+                                max-width: 200px;
+                            }
+                        }
+                    }
+                }
+                .musculosas__col--grid {
+                    grid-template-columns: repeat(3, 1fr);
                 }
             }
         }
-        .musculosas__section {
-            padding: 0;
-            min-height: 110vh;
-            .musculosas__logo {
-                max-width: 300px;
-            }
-            .musculosas__box {
-                .musculosas__card {
-                    width: 390px;
-                    height: 450px;
-                }   
+    }
+}
+
+@media (min-width: 1400px) {
+    .musculosas {
+        &__section {
+            .musculosas__div {
+                .musculosas__col--grid {
+                    .musculosas__card {
+                        width: 390px;
+                        height: 450px;
+                    }   
+                }
             }
         }
         .sidebar {
@@ -255,13 +270,5 @@
     }
 }
 
-@media (min-width: 1400px) {
-    .main {
-        .musculosas__section {
-            .musculosas__box {
-                padding-top: 8em;
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    }
-}
+
+
