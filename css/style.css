@@ -199,6 +199,13 @@ html {
   gap: 2em; }
   .main__section--first .main__div .main__col {
     text-align: center; }
+  .main__section--first .main__div .main__col--1 .main__tittleBox p {
+    padding-top: 3em;
+    font-size: 1.3em;
+    color: #c4c2c2;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300; }
   .main__section--first .main__div .main__col--2 .main__textBox p {
     font-size: calc(.5rem + .6vw);
     padding-top: 0.4em; }
@@ -387,7 +394,7 @@ html {
 .musculosas .sidebar.sticky {
   opacity: 1;
   transform: scale(1, 1);
-  transform-origin: left; }
+  transform-origin: center; }
 
 @media (min-width: 1000px) {
   .musculosas__section {

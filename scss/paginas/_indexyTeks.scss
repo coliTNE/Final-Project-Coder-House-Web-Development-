@@ -15,6 +15,14 @@
                     h1 {
                         @extend %tittleStyle;
                     }
+                    p {
+                        padding-top: 3em;
+                        font-size: 1.3em;
+                        color: $lightgray;
+                        font-family: $oswald;
+                        letter-spacing: 2px;
+                        font-weight: 300;
+                    }
                 }
             }
             .main__col--2 {
