@@ -10,7 +10,9 @@
   border-top: unset; }
 
 .main__section--first .main__div .main__col--1 .main__tittleBox h1, .musculosas__section--first .musculosas__tittleBox h1 {
-  font-size: calc(4.2vw + 2rem); }
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: calc(4.3vw + 2.2rem); }
 
 .main__section--first .main__div .main__col--2 .main__textBox h2, .musculosas__section--first .musculosas__tittleBox h2 {
   font-size: calc(2vw + 1rem); }
@@ -200,12 +202,10 @@ html {
   .main__section--first .main__div .main__col {
     text-align: center; }
   .main__section--first .main__div .main__col--1 .main__tittleBox p {
-    padding-top: 3em;
-    font-size: 1.3em;
+    padding: 1em 0 2em 0;
+    font-size: calc(.3rem + .5vw);
     color: #c4c2c2;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 2px;
-    font-weight: 300; }
+    letter-spacing: 1.2px; }
   .main__section--first .main__div .main__col--2 .main__textBox p {
     font-size: calc(.5rem + .6vw);
     padding-top: 0.4em; }
